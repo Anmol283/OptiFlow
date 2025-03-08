@@ -1,0 +1,208 @@
+/* Global Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    margin: 0;
+    padding: 0;
+}
+/* Centering the Signup and Login Containers */
+.signup-container, .login-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Signup and Login Box Styling */
+.signup-box, .login-box {
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    border-radius: 12px; 
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); 
+    backdrop-filter: blur(10px); 
+}
+/* Logo Styling */
+.signup-logo img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Headings */
+h2 {
+    margin: 0;
+    font-size: 24px;
+    color:black;
+}
+
+p {
+    color:black;
+    font-size: 14px;
+}
+
+/* Social Signup Buttons */
+.social-signup, .social-login {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    border-radius: 12px;
+    padding: 10px;
+    width: fit-content;
+    margin: 15px auto;
+    background: transparent;
+}
+
+.social-btn {
+    /* background: #fff; */
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 120px;
+    height: 50px;
+}
+
+.social-btn:hover {
+    background: rgba(215, 213, 213, 0.888);
+    transform: scale(1.05);
+}
+
+/* Social Icons */
+.social-btn img {
+    height: 30px;
+    width: 30px;
+}
+
+/* Divider */
+.divider {
+    margin: 10px 0;
+    font-weight: bold;
+    color:black;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 1px;
+    background: #ddd;
+    top: 50%;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input {
+    width: 90%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 8px 0;
+    border: 1px solid #dddddd80;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-input:focus {
+    border-color: #ddd;
+}
+
+/* Terms & Conditions */
+.terms {
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.terms a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+/* Signup and Sign-in Buttons */
+.form-input{
+    background: rgba(255, 255, 255, 0.6); 
+    color: black;
+    padding: 12px;
+    border: 1px solid black; /* Added explicit border since border-color alone isn’t enough */
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s; /* Specified property for transition */
+}
+.signup-btn, .sign-in-btn{
+    background: rgba(255, 255, 255, 0.3); 
+    color: black;
+    padding: 12px;
+    border: 1px solid black; /* Added explicit border since border-color alone isn’t enough */
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s; /* Specified property for transition */
+    width: 97%;
+}
+
+.signup-btn:hover, .sign-in-btn:hover {
+    background: rgba(131, 131, 131, 0.888); /* Darker gray on hover */
+}
+/* Login Link */
+.login-link, .signup-link {
+    font-size: 14px;
+    margin-top: 10px;
+    color: black;
+}
+
+.login-link a, .signup-link a {
+    color:black;
+    text-decoration: none;
+}
+
+.login-link a:hover, .signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Particles Background - Ensure it doesn't create an extra box */
+.particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background: transparent; /* Changed to transparent to remove the dark box */
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .signup-box, .login-box {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}

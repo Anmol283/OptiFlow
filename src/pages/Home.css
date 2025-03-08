@@ -1,0 +1,266 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    margin: 0;
+    padding: 0;
+}
+
+.task-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 20px;
+    margin-top: 20px;  
+    margin-left: 190px;
+}
+
+.task-column {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    min-height: 500px;
+    color: white;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.task-column:hover {
+    transform: scale(1.02);
+}
+
+.task-column h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #f8f9fa;
+}
+
+/* ... (keep the rest of your CSS unchanged until .task-column ul) ... */
+
+.task-column ul {
+    list-style: none; /* Removes default bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+/* Ensure no stray bullets or artifacts */
+.task-column li {
+    background: rgba(255, 255, 255, 0.2);
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+    text-align: left;
+    position: relative;
+    list-style-type: none; /* Double-check no bullets */
+}
+
+.task-column li:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.task-column li.high { border-left: 4px solid #ff0000; }
+.task-column li.medium { border-left: 4px solid #ffa500; }
+.task-column li.low { border-left: 4px solid #008000; }
+
+.task-name {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.task-date {
+    display: block;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+
+.status-buttons {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.status-btn {
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    background: none; /* Reset background to avoid overlap */
+    padding: 0; /* Remove padding to avoid shifting */
+    font-size: 18px; /* Control the dot size */
+    line-height: 20px; /* Center the dot vertically */
+    text-align: center; /* Center the dot horizontally */
+    color: inherit; /* Use the specific color from the class below */
+}
+
+.status-btn:hover {
+    opacity: 1;
+}
+
+.status-btn.todo { 
+    background-color: #ed4444; 
+    color: #ed4444; 
+}
+.status-btn.progress { 
+    background-color: #fac25a; 
+    color: #fac25a;
+}
+.status-btn.completed { 
+    background-color: #5ae45a; 
+    color: #5ae45a;
+}
+
+
+.input-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.add-task-btn {
+    background: linear-gradient(45deg, #28a745, #2ecc71);
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.add-task-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 900px) {
+    .task-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .task-column {
+        width: 90%;
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    /* background: rgba(255, 255, 255, 0.95); */
+    background: rgba(255, 255, 255, 0.295);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px;
+}
+
+.modal-content input{
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    color: black;
+    border: 1px solid #7a7373c5;
+    background: rgba(255, 255, 255, 0.756);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.modal-content select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #7a7373c5;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    margin: 10px 5px 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    transition: background 0.3s;
+}
+
+.modal-content button:first-child {
+    background: #28a745;
+}
+
+.modal-content button:first-child:hover {
+    background: #218838;
+}
+.adding{
+    background: rgba(59, 211, 75, 0.6);
+    
+}
+.close-btn {
+    background: rgba(201, 20, 20, 0.6);
+}
+.note {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: #f8f9fa;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    margin-top: 55px;
+    margin-left: 480px;
+}
+
+.note span {
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.blue-dot {
+    color: #fac25a;
+}
+
+.grey-dot {
+    color: #5ae45a;
+}
+
+.pink-dot {
+    color: #ed4444;
+}
+
+/* Responsive Styling */
+@media (max-width: 900px) {
+    .note {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}

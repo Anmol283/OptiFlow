@@ -1,0 +1,99 @@
+.calendar-container {
+    padding: 20px;
+    max-width: 900px; /* Reduced from 1200px to make it smaller */
+    margin-top:130px;
+    margin-left: 350px; /* Specific left margin as requested */
+    height: 500px; /* Specific height as requested */
+    background: rgba(255, 255, 255, 0.295); /* Slightly transparent white background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 0 10px;
+}
+
+.calendar-header button {
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.calendar-header button:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.calendar-header h1 {
+    font-size: 1.5em; /* Slightly smaller header */
+    color: #333;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px; /* Reduced from 5px */
+    height: calc(100% - 60px); /* Adjusts grid height to fit container, accounting for header */
+}
+
+.calendar-day {
+    border: 1px solid rgba(221, 221, 221, 0.5); /* More transparent border */
+    padding: 8px; /* Reduced from 10px */
+    background: rgba(255, 255, 255, 0.7); /* More transparent */
+    transition: background 0.2s;
+    overflow-y: auto; /* Adds scroll if tasks overflow */
+}
+
+.calendar-day:hover {
+    background: rgba(255, 255, 255, 0.9); /* Slightly less transparent on hover */
+}
+
+.calendar-day.header {
+    background: rgba(240, 240, 240, 0.8);
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding: 5px;
+}
+
+.calendar-day.empty {
+    background: rgba(249, 249, 249, 0.5);
+    border: none;
+}
+
+.day-number {
+    display: block;
+    margin-bottom: 4px; /* Reduced from 5px */
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #444;
+}
+
+
+.day-number {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #444;
+}
+
+.task-count {
+    display: block;
+    margin: 3px 0;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    background: rgba(61, 61, 61, 0.9); 
+    color: white;
+    text-align: center;
+    font-weight: 500;
+}

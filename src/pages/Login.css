@@ -1,0 +1,204 @@
+/* Centering the login container */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    margin: 0;
+    padding: 0;
+}
+
+/* Login Box Styling */
+.login-box {
+    background:rgba(51, 51, 51, 0.8); 
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 150px;
+    margin-left: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    text-align: center;
+    backdrop-filter: blur(5px); 
+}
+
+/* Logo Styling */
+.logo img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Headings */
+h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #ddd;
+}
+
+p {
+    color: #ddd;
+    font-size: 14px;
+}
+
+/* Social Login Buttons */
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    /* border: 2px solid black;  */
+    border-radius: 12px; /* Rounded corners */
+    padding: 10px; /* Spacing inside the border */
+    width: fit-content;
+    margin: 15px auto;
+    /* background-color: rgba(80, 80, 80, 0.85) */
+}
+
+.social-btn {
+    background: #fff;
+    border: 2px solid black; /* Black border */
+    padding: 10px 20px; /* Adjust padding for rectangular shape */
+    border-radius: 20px; /* Rounded edges */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 120px; /* Set a fixed width for rectangular shape */
+    height: 50px; /* Set height */
+}
+
+.social-btn:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* Social Icons */
+.social-btn img {
+    height: 30px;
+    width: 30px;
+}
+
+/* Divider */
+.divider {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #888;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 1px;
+    background: #ddd;
+    top: 50%;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input {
+    width: 90%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-input:focus {
+    border-color: #ddd;
+}
+
+/* Form Options */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.forgot-password {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Sign In Button */
+.sign-in-btn {
+    background: rgba(120, 120, 120, 0.8);
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    width:96%;
+}
+
+.sign-in-btn:hover {
+    background: rgba(100, 100, 100, 0.85);
+}
+
+/* Sign Up Link */
+.signup-link {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.signup-link a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login-box {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}
+  
+.particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background: linear-gradient(135deg, #1e1e2e, #111120);
+  }
+  
+  
+  .login-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-top: -60px;
+    margin-left: -500px;
+  }
+  
