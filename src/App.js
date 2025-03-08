@@ -5,6 +5,7 @@ import Signup from './pages/Signup';
 import Home from './pages/Home';
 import Calendar from './pages/Calendar';
 import Report from './pages/Report';
+
 import ThreeParticles from './components/ThreeParticles';
 import TaskLoader from './pages/TaskLoader';
 import { auth } from './components/Firebase'; 
