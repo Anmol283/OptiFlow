@@ -5,7 +5,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyBQeU3JsYnORyiWGQvOkFZjlKXIDKzUT3o",
   authDomain: "task-manager-5c793.firebaseapp.com",
   projectId: "task-manager-5c793",
-  storageBucket: "task-manager-5c793.firebasestorage.app",
+  storageBucket: "task-manager-5c793.appspot.com",
   messagingSenderId: "55125239666",
   appId: "1:55125239666:web:31d0328b6893b563099feb"
 };
