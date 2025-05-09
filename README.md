@@ -209,7 +209,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - [React DnD](https://react-dnd.github.io/react-dnd/)
 
 ---
-
-<div align="center">
-Made with ❤️ by Anmol
-</div>
